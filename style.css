@@ -95,3 +95,48 @@ body {
 @media (max-width: 768px) {
     .card-container { flex-direction: column; }
 }
+
+.photo-container {
+    width: 140px; 
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    overflow: hidden; /* Важно: обрезает фото по кругу */
+    margin-bottom: 20px;
+    
+    /* Добавляем тень для объема */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    
+    /* Указываем, что вложенное фото может выходить за пределы при анимации */
+    position: relative; 
+    
+    /* Чтобы контейнер тоже немного реагировал */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.profile-img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    
+    /* ГЛАВНОЕ: Плавность перехода для свойства transform */
+    transition: transform 0.5s ease-out; 
+    
+    /* Начальное состояние (без изменений) */
+    transform: scale(1); 
+}
+
+/* Эффект при наведении на КОНТЕЙНЕР */
+.photo-container:hover {
+    /* Контейнер немного приподнимается и тень увеличивается */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border-color: #ffffff; /* Меняем цвет рамки при наведении на белый */
+}
+
+/* Эффект при наведении на КОНТЕЙНЕР для вложенного ФОТО */
+.photo-container:hover .profile-img {
+    /* Само фото внутри контейнера увеличивается на 15% */
+    transform: scale(1.15); 
+}
