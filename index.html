@@ -1,45 +1,84 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Визитка участника 1</title>
+    <title>Carte de visite - Karelin Artem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navigation">
-        <a href="index.html" class="nav-link active">Участник 1</a>
-        <a href="member2.html" class="nav-link">Участник 2</a>
-        <a href="member3.html" class="nav-link">Участник 3</a>
-    </nav>
+    <a href="index.html" class="nav-link active">Artem</a>ы
+    <a href="member2.html" class="nav-link">Membre 2</a>
+    <a href="member3.html" class="nav-link">Membre 3</a>
+    <button id="theme-toggle" class="nav-link"><i class="fas fa-moon"></i></button>
+</nav>
+
+<p class="role" id="typing-text"></p>
+
+<script src="script.js"></script>
 
     <main class="card-container">
         <section class="profile-sidebar">
-            <div class="photo-placeholder">Фото</div>
-            <h1>Artem Karelin</h1>
-            <p class="role">UI/UX Дизайнер</p>
+            <div class="photo-container">
+                <img src="photo1.jpg" alt="Karelin Artem" class="profile-img">
+            </div>
+            <h1>Karelin Artem</h1>
+            <p class="role">Designer UI/UX & Développeur</p>
+
+            <div class="sidebar-info">
+                <h4>Langues</h4>
+                <p>Russe — Maternel</p>
+                <p>Français — Avancé</p>
+                <p>Anglais — Courant</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://linkedin.com/in/karelinartem" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:karelinskit@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </section>
 
         <section class="profile-content">
             <div class="info-block">
-                <h3>О себе</h3>
-                <p>Создаю удобные интерфейсы уже 5 лет. Люблю минимализм и функциональность.</p>
+                <h3>À propos</h3>
+                <p>Passionné par la création d'interfaces intuitives et le développement de solutions robustes. Plus de 5 ans d'expérience dans l'écosystème numérique.</p>
             </div>
 
             <div class="info-block">
-                <h3>Навыки</h3>
+                <h3>Expériences</h3>
+                <div class="timeline-item">
+                    <strong>Développeur Full-Stack — Freelance</strong>
+                    <span>2022 - Présent</span>
+                    <p>Développement d'applications web modernes et optimisation de l'expérience utilisateur.</p>
+                </div>
+                <div class="timeline-item">
+                    <strong>Designer UI/UX — Tech Agency</strong>
+                    <span>2019 - 2021</span>
+                    <p>Conception de maquettes haute fidélité и прототипирование интерфейсов.</p>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>Formation</h3>
+                <div class="timeline-item">
+                    <strong>Master en Informatique / Design</strong>
+                    <span>Université de Lyon, France</span>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>Compétences</h3>
                 <ul class="skills-list">
-                    <li>Figma</li>
-                    <li>Adobe XD</li>
+                    <li>Python</li>
                     <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Adobe Creative Suite</li>
+                    <li>Figma</li>
                 </ul>
-            </div>
-
-            <div class="info-block">
-                <h3>Контакты</h3>
-                <p>Email: ivan@example.com</p>
-                <p>Telegram: @ivan_design</p>
             </div>
         </section>
     </main>
