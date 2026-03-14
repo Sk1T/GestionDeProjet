@@ -11,11 +11,11 @@
 
 body.dark-mode {
     --bg-color: #0f0f0f;      
-    --card-bg: #1e1e1e;       
-    --text-main: #f0f2f5;     
-    --text-muted: #b0b3b8;    
+    --card-bg: #1a1a1a;       /* Чуть светлее фона сайта для объема */
+    --text-main: #ffffff;     /* Чисто белый для контраста */
+    --text-muted: #d1d1d1;    /* Светло-серый для легкого чтения */
     --primary-color: #000000;
-    --white: #2a2a2a; /* Цвет кнопок в темной теме */
+    --white: #2a2a2a;         /* Цвет кнопок навигации */
 }
 
 /* 2. БАЗОВЫЕ СТИЛИ */
@@ -32,11 +32,7 @@ body {
 }
 
 /* 3. НАВИГАЦИЯ */
-.navigation { 
-    margin-bottom: 25px; 
-    display: flex; 
-    gap: 10px; 
-}
+.navigation { margin-bottom: 25px; display: flex; gap: 10px; }
 
 .nav-link { 
     text-decoration: none; 
@@ -53,11 +49,6 @@ body {
 .nav-link.active, .nav-link:hover { 
     background: var(--accent-color); 
     color: white; 
-}
-
-#theme-toggle {
-    cursor: pointer;
-    outline: none;
 }
 
 /* 4. КАРТОЧКА */
@@ -79,7 +70,7 @@ body.dark-mode .card-container {
 /* 5. САЙДБАР (Левая часть) */
 .profile-sidebar {
     background-color: var(--primary-color);
-    color: white; /* В сайдбаре текст всегда белый */
+    color: white; 
     padding: 40px 25px;
     flex: 1;
     display: flex;
@@ -97,8 +88,13 @@ body.dark-mode .card-container {
     margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: relative; 
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
+}
+
+/* Эффект свечения в темной теме */
+body.dark-mode .photo-container {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
 }
 
 .profile-img { 
@@ -114,9 +110,7 @@ body.dark-mode .card-container {
     border-color: #ffffff;
 }
 
-.photo-container:hover .profile-img {
-    transform: scale(1.15); 
-}
+.photo-container:hover .profile-img { transform: scale(1.15); }
 
 .role { 
     color: var(--accent-color); 
@@ -141,10 +135,7 @@ body.dark-mode .card-container {
 .social-links a:hover { color: var(--accent-color); transform: translateY(-3px); }
 
 /* 6. КОНТЕНТ (Правая часть) */
-.profile-content { 
-    flex: 2; 
-    padding: 40px; 
-}
+.profile-content { flex: 2; padding: 40px; }
 
 .info-block { margin-bottom: 30px; }
 
@@ -157,46 +148,44 @@ body.dark-mode .card-container {
     text-transform: uppercase;
 }
 
+/* Фикс текста описаний */
 .info-block p, .timeline-item p {
     color: var(--text-muted);
     font-size: 0.95em;
     line-height: 1.6;
 }
 
-.timeline-item { margin-bottom: 15px; }
+.timeline-item { margin-bottom: 20px; }
 
+/* Фикс заголовков в опыте (теперь не будут черными) */
 .timeline-item strong { 
     display: block; 
     color: var(--text-main); 
+    font-size: 1.05em;
 }
 
 .timeline-item span { 
-    font-size: 0.8em; 
-    color: var(--accent-color); /* Даты теперь в цвете акцента для стиля */
+    font-size: 0.85em; 
+    color: var(--accent-color); 
+    font-weight: 500;
 }
 
 /* 7. НАВЫКИ */
-.skills-list { 
-    list-style: none; 
-    padding: 0; 
-    display: flex; 
-    gap: 8px; 
-    flex-wrap: wrap; 
-}
+.skills-list { list-style: none; padding: 0; display: flex; gap: 8px; flex-wrap: wrap; }
 
 .skills-list li { 
     background: #eef2f7; 
-    color: var(--primary-color);
+    color: #1a1a1a;
     padding: 6px 12px; 
     border-radius: 4px; 
     font-size: 0.85em; 
-    font-weight: 500; 
+    font-weight: 600; 
     transition: 0.3s;
 }
 
 body.dark-mode .skills-list li {
     background: #333;
-    color: #fff;
+    color: #ffffff;
     border: 1px solid #444;
 }
 
