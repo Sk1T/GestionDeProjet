@@ -8,7 +8,7 @@ function typeEffect() {
     if (index < profession.length) {
         textElement.textContent += profession.charAt(index);
         index++;
-        setTimeout(typeEffect, 100); // Скорость печати
+        setTimeout(typeEffect, 50); // Скорость печати
     }
 }
 
