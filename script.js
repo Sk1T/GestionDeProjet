@@ -1,0 +1,31 @@
+
+const textElement = document.getElementById('typing-text');
+const profession = "Designer UI/UX et Développeur";
+let index = 0;
+
+function typeEffect() {
+    if (index < profession.length) {
+        textElement.textContent += profession.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100); 
+    }
+}
+
+const themeBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+   
+    const icon = themeBtn.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+    }
+});
+
+window.onload = () => {
+    typeEffect();
+};

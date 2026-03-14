@@ -140,3 +140,31 @@ body {
     /* Само фото внутри контейнера увеличивается на 15% */
     transform: scale(1.15); 
 }
+/* Переменные для темной темы */
+body.dark-mode {
+    --bg-color: #121212;
+    --white: #1e1e1e;
+    --text-color: #e0e0e0;
+    --primary-color: #000000;
+}
+
+body.dark-mode .card-container {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .info-block p {
+    color: #bbb;
+}
+
+body.dark-mode .skills-list li {
+    background: #333;
+    color: #fff;
+}
+
+/* Стили для кнопки переключения */
+#theme-toggle {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: var(--white);
+}
