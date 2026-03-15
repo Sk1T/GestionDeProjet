@@ -1,13 +1,14 @@
 // 1. Эффект печатающегося текста
 const textElement = document.getElementById('typing-text');
-const profession = "Designer UI/UX et Développeur";
+const profession = textElement.textContent; // Получаем текст из элемента
+textElement.textContent = ''; // Очищаем текст для эффекта печати
 let index = 0;
 
 function typeEffect() {
     if (index < profession.length) {
         textElement.textContent += profession.charAt(index);
         index++;
-        setTimeout(typeEffect, 100); // Скорость печати
+        setTimeout(typeEffect, 50); // Скорость печати
     }
 }
 
